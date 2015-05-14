@@ -84,6 +84,10 @@ var saveImage = function saveImage(imageData, fileName) {
 		for (var y = 0; y < height; ++y) {
 			for (var x = 0; x < width; ++x) {
 				var p = y * width * 4 + x * 4
+				if (data[y][x] === undefined) {
+					data[y][x] = new Pixel(0, 0, 0, 0);	
+				}
+				
 				rgba_data[p + 0] = data[y][x].r;
 				rgba_data[p + 1] = data[y][x].g;
 				rgba_data[p + 2] = data[y][x].b;

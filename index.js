@@ -1,7 +1,7 @@
 var program = require('commander'),
 	express = require('express'),
 	path = require('path'),
-	pkg = require(path.join(__dirname, 'package.json'));
+	pkg = require('./package.json');
 
 program.version(pkg.version)
 	.option('-d, --directory <directory>', 'The working directory (defaults to the current directory)')
